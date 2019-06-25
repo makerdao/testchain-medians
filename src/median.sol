@@ -30,8 +30,8 @@ contract MedianETHUSD is Median {
     }
 }
 
-contract MedianCOL1USD is Median {
-    bytes32 public constant wat = "COL1";
+contract MedianREPUSD is Median {
+    bytes32 public constant wat = "REPUSD";
 
     function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
         return ecrecover(
@@ -41,8 +41,8 @@ contract MedianCOL1USD is Median {
     }
 }
 
-contract MedianCOL2USD is Median {
-    bytes32 public constant wat = "COL2";
+contract MedianZRXUSD is Median {
+    bytes32 public constant wat = "ZRXUSD";
 
     function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
         return ecrecover(
@@ -52,8 +52,8 @@ contract MedianCOL2USD is Median {
     }
 }
 
-contract MedianCOL3USD is Median {
-    bytes32 public constant wat = "COL3";
+contract MedianOMGUSD is Median {
+    bytes32 public constant wat = "OMGUSD";
 
     function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
         return ecrecover(
@@ -63,8 +63,8 @@ contract MedianCOL3USD is Median {
     }
 }
 
-contract MedianCOL4USD is Median {
-    bytes32 public constant wat = "COL4";
+contract MedianBATUSD is Median {
+    bytes32 public constant wat = "BATUSD";
 
     function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
         return ecrecover(
@@ -74,8 +74,8 @@ contract MedianCOL4USD is Median {
     }
 }
 
-contract MedianCOL5USD is Median {
-    bytes32 public constant wat = "COL5";
+contract MedianDGDUSD is Median {
+    bytes32 public constant wat = "DGDUSD";
 
     function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
         return ecrecover(
@@ -85,8 +85,8 @@ contract MedianCOL5USD is Median {
     }
 }
 
-contract MedianCOL6USD is Median {
-    bytes32 public constant wat = "COL6";
+contract MedianGNTUSD is Median {
+    bytes32 public constant wat = "GNTUSD";
 
     function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
         return ecrecover(
