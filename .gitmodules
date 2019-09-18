@@ -4,4 +4,3 @@
 [submodule "lib/median"]
 	path = lib/median
 	url = https://github.com/makerdao/median
-	branch = gas-saver
