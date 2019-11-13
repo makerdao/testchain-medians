@@ -15,12 +15,34 @@
 // You should have received a copy of the GNU General Public License
 // along with this program. If not, see <http://www.gnu.org/licenses/>.
 
-pragma solidity ^0.5.2;
+pragma solidity >=0.5.10;
 
 import "median/median.sol";
 
 contract MedianETHUSD is Median {
     bytes32 public constant wat = "ETHUSD";
+
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+        return ecrecover(
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            v, r, s
+        );
+    }
+}
+
+contract MedianBATUSD is Median {
+    bytes32 public constant wat = "BATUSD";
+
+    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
+        return ecrecover(
+            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
+            v, r, s
+        );
+    }
+}
+
+contract MedianETHUSD is Median {
+    bytes32 public constant wat = "BTCUSD";
 
     function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
         return ecrecover(
@@ -54,17 +76,6 @@ contract MedianZRXUSD is Median {
 
 contract MedianOMGUSD is Median {
     bytes32 public constant wat = "OMGUSD";
-
-    function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
-        return ecrecover(
-            keccak256(abi.encodePacked("\x19Ethereum Signed Message:\n32", keccak256(abi.encodePacked(val_, age_, wat)))),
-            v, r, s
-        );
-    }
-}
-
-contract MedianBATUSD is Median {
-    bytes32 public constant wat = "BATUSD";
 
     function recover(uint256 val_, uint256 age_, uint8 v, bytes32 r, bytes32 s) internal pure returns (address) {
         return ecrecover(
